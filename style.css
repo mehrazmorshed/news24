@@ -1,0 +1,771 @@
+/*
+Theme Name: News24
+Author: Mehraz Morshed
+Author URI: https://mehrazmorshed.com
+Description: news24 is a classic WordPress theme designed specifically for bloggers who value simplicity and elegance. With its clean design and intuitive layout, news24 provides a seamless reading experience that keeps your content at the forefront.
+Version: 1.1.9
+Requires at least: 4.4
+Tested up to: 6.6
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: news24
+Domain Path: /languages
+Tags: one-column, two-columns, right-sidebar, flexible-header, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, theme-options, translation-ready, blog, entertainment, full-width-template, post-formats, rtl-language-support, threaded-comments
+
+Screenshot image is a collage of actual sites created using the news24 WordPress Theme.
+
+*/
+
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005177;
+}
+
+/* Header Styles */
+
+header.site-header {
+    padding-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+header.site-header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.site-branding {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.site-title a {
+    text-decoration: none;
+}
+
+.site-description {
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Contents */
+
+.site-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.content-area {
+    flex: 3;
+    padding: 20px;
+}
+
+.widget-area {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.site-main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+article.dotted {
+    padding-bottom: 20px;
+    border-bottom: 2px dotted #0073aa;
+}
+
+div#dotted{
+
+    border-bottom: 2px dotted #0073aa;
+}
+
+.entry-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.entry-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.entry-meta {
+    font-size: 14px;
+    color: #777;
+}
+
+.entry-content {
+    margin-top: 2px;
+    line-height: 1.8;
+}
+
+.entry-footer {
+    margin-top: 2px;
+    border-top: 1px solid #ddd;
+    padding-top: 2px;
+    font-size: 14px;
+    color: #777;
+}
+
+.entry-footer a{
+    text-decoration: underline;
+}
+
+/* Widget Area Styles */
+
+.widget-area .widget {
+    margin-bottom: 20px;
+}
+
+.widget-area .widget h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 5px;
+}
+
+.widget-area .widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget-area .widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget-area .widget ul li a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.widget-area .widget ul li a:hover {
+    color: #005177;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list .comment {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-list .comment-author {
+    font-weight: bold;
+}
+
+.comment-list .comment-meta {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Footer Styles */
+
+footer.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #0073aa;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+footer.site-footer a {
+    color: #eee;
+}
+
+footer.site-footer a:hover {
+    color: #fff;
+}
+
+/* Button Styles */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: #005177;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .site-content {
+        flex-direction: column;
+    }
+
+    .content-area, .widget-area {
+        padding: 10px;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Featured Image Styles */
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Recommended WordPress CSS classes */
+
+.wp-caption {
+    max-width: 100%;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.wp-caption-text {
+    font-size: 12px;
+    color: #777;
+}
+
+.sticky {
+    border: 2px solid #0073aa;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.gallery-caption {
+    margin-top: 0.5em;
+    font-size: 12px;
+    color: #777;
+}
+
+.bypostauthor {
+    font-weight: bold;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+}
+
+/* Archive Page Styles */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.archive-description {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Responsive navigation styles */
+
+nav {
+    display: block;
+    width: 100%;
+    background-color: #333333;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: inherit;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    float: right; /* Float to the right */
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-navigation ul li {
+    position: relative;
+}
+
+.main-navigation ul li:hover {
+    background-color: #666666;
+}
+
+.main-navigation ul li a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-navigation ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+    display: block;
+}
+
+.main-navigation ul li ul li {
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-navigation ul.toggled {
+        display: flex;
+    }
+
+    .main-navigation ul li {
+        width: 100%;
+    }
+
+    .main-navigation ul li ul {
+        position: static;
+        box-shadow: none;
+    }
+
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+        display: none;
+    }
+}
+
+/* Style for the navigation wrapper */
+
+.navigation-post {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the post navigation table */
+.post-navigation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for the previous and next post cells */
+.post-navigation-table .previous-post,
+.post-navigation-table .next-post {
+    padding: 10px;
+    vertical-align: top;
+}
+
+/* Align previous post to the left */
+.post-navigation-table .previous-post {
+    text-align: left;
+    width: 50%;
+}
+
+/* Align next post to the right */
+.post-navigation-table .next-post {
+    text-align: right;
+    width: 50%;
+}
+
+/* General styles for the links */
+.post-navigation-table a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-navigation-table .post-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.post-navigation-table a:hover .post-title {
+    color: #0073aa; /* Change this to match your theme's accent color */
+}
+
+/* Style for the labels (Next post, Previous post) */
+.post-navigation-table .previous-post span:first-child,
+.post-navigation-table .next-post span:first-child {
+    display: block;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Add some hover effects */
+.post-navigation-table .previous-post:hover,
+.post-navigation-table .next-post:hover {
+    background-color: #dfdfdf;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Style for the comments area */
+
+.comments-area {
+    margin: 30px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the comments title */
+.comments-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* Style for the comment list */
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for individual comments */
+.comment-list .comment {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+}
+
+.comment-list .comment::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: #0073aa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+.comment-list .comment .comment-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.comment-list .comment .comment-author .avatar {
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.comment-list .comment .comment-author b {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+.comment-list .comment .comment-metadata {
+    font-size: 12px;
+    color: #666;
+}
+
+.comment-list .comment .comment-content {
+    margin-top: 8px;
+    color: #333;
+}
+
+/* Style for comment form */
+.comment-respond {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-respond h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.comment-respond label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-respond input,
+.comment-respond textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.comment-respond input[type="submit"] {
+    background-color: #0073aa;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.comment-respond input[type="submit"]:hover {
+    background-color: #005a87;
+}
+
+/* added later */
+p.comment-form-cookies-consent {
+    display: none;
+}
+
+/* Pagination Styles */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: inherit;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #0073aa;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+.pagination .prev,
+.pagination .next {
+    font-weight: bold;
+}
+
+/* Submenu Keyboard Navigation Style */
+
+/* Default link styling */
+.menu a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+/* Focus state */
+.menu a:focus {
+    outline: 2px solid #005177;
+    background-color: #e0e0e0;
+}
+
+/* Sub-menu hidden by default */
+.menu .sub-menu {
+    display: none;
+}
+
+/* Show sub-menu when expanded */
+.menu .sub-menu[aria-expanded="true"] {
+    display: block;
+}
+
+/* Underline Link Style */
+
+/* Default link styling */
+a {
+    text-decoration: underline; /* Underline links by default */
+    color: #0073aa; /* Example link color */
+}
+
+/* Hover effect */
+a:hover,
+a:focus {
+    color: #005177; /* Darker color on hover/focus */
+    text-decoration: none; /* Optionally remove underline on hover/focus */
+}
+
+/* Ensure sufficient contrast */
+a {
+    color: #0073aa; /* Ensure link color has sufficient contrast with background */
+}
+
+/* Links within specific sections */
+.header a,
+.footer a {
+    text-decoration: none; /* Example: no underline in header/footer */
+}
+
+/* Additional hover effect for sections */
+.header a:hover,
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover in header/footer */
+}
+
+/* Sidebar Comments Widget */
+
+aside .wp-block-latest-comments{
+    padding-left: 0;
+}
+
+/* Sidebar Social Media Widget Icons */
+
+.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg{
+    fill: #ffffff;
+}
+.wp-block-social-link {
+    border-radius: 9px
+}
+
+/* Sidebar Calendar Widget Styles */
+
+table#wp-calendar.wp-calendar-table caption{
+    color: #ffffff;
+    background-color: #0073AA;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+nav.wp-calendar-nav a{
+    color: #ffffff;
+}
+
+/* Sidebar Widget Button Block Styles */
+
+.wp-block-button__link {
+    color: #0073AA;
+    background-color: #fff;
+    border: 2px solid #0073AA;
+    border-radius: 9px;
+}
+
+.wp-block-button__link:hover {
+    color: #fff;
+    background-color: #0073AA;
+    border: 2px solid #0073AA;
+}
