@@ -2,7 +2,7 @@
 /**
  * Template Tags for news24 theme.
  *
- * @package     news24
+ * @package     News24
  * @author      Mehraz Morshed
  * @copyright   Copyright (c) 2020, Mehraz Morshed
  * @link        https://mehrazmorshed.com
