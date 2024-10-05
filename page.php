@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package news24
+ * @package News24
  * @since 1.0
  */
 
