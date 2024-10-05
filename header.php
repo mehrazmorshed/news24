@@ -2,9 +2,7 @@
 /**
  * The header for news24 Theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * This template displays the <head> section and everything up until <div id="content">
  *
  * @package news24
  * @since 1.0
@@ -30,33 +28,45 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'news24' ); ?></a>
 
         <header id="masthead" class="site-header">
-            <div class="site-branding">
-                <?php if ( is_front_page() && is_home() ) : ?>
-                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <?php else : ?>
-                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                <?php
-                    endif;
+            <div class="header-container">
+                <div class="site-branding">
+                    <?php if ( has_custom_logo() ) : ?>
+                        <div class="site-logo">
+                            <?php the_custom_logo(); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ( is_front_page() && is_home() ) : ?>
+                        <h1 class="site-title">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        </h1>
+                    <?php else : ?>
+                        <p class="site-title">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        </p>
+                    <?php endif; ?>
+
+                    <?php
                     $news24_description = get_bloginfo( 'description', 'display' );
                     if ( $news24_description || is_customize_preview() ) :
-                ?>
-                <p class="site-description"><?php echo $news24_description; /* WPCS: xss ok. */ ?></p>
-                <?php endif; ?>
-            </div><!-- .site-branding -->
+                    ?>
+                        <p class="site-description"><?php echo $news24_description; ?></p>
+                    <?php endif; ?>
+                </div><!-- .site-branding -->
 
-            <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <img width="24" height="24" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/home.png'); ?>" alt="Menu">
-                </button>
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'primary-menu',
-                    'menu_class'     => 'menu',
-                ) );
-                ?>
-            </nav><!-- #site-navigation -->
-
+                <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'news24' ); ?>">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <span class="menu-icon">&#9776;</span> <!-- Hamburger icon -->
+                    </button>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                        'menu_class'     => 'menu',
+                    ) );
+                    ?>
+                </nav><!-- #site-navigation -->
+            </div><!-- .header-container -->
         </header><!-- #masthead -->
 
         <div id="content" class="site-content">

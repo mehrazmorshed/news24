@@ -22,7 +22,7 @@ function news24_customize_register( $wp_customize ) {
     // Add Header Background Color setting and control
 
     $wp_customize->add_setting( 'header_background_color', array(
-        'default'           => '#0073aa',
+        'default'           => '#445591',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
@@ -35,7 +35,7 @@ function news24_customize_register( $wp_customize ) {
     // Add setting and control for link color
 
     $wp_customize->add_setting( 'news24_link_color' , array(
-        'default'   => '#0073aa',
+        'default'   => '#445591',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -122,14 +122,14 @@ add_action( 'customize_register', 'news24_customize_register' );
 function news24_customize_css() {
     ?>
     <style type="text/css">
-        a { color: <?php echo esc_attr( get_theme_mod( 'news24_link_color', '#0073aa' ) ); ?>; }
-        #secondary.widget-area ul li a { color: <?php echo esc_attr( get_theme_mod( 'news24_link_color', '#0073aa' ) ); ?>; }
+        a { color: <?php echo esc_attr( get_theme_mod( 'news24_link_color', '#445591' ) ); ?>; }
+        #secondary.widget-area ul li a { color: <?php echo esc_attr( get_theme_mod( 'news24_link_color', '#445591' ) ); ?>; }
         body { 
             color: <?php echo esc_attr( get_theme_mod( 'news24_text_color', '#333333' ) ); ?>; 
         }
         header.site-header a { color: #<?php echo esc_attr( get_header_textcolor() ); ?>; }
         header.site-header { 
-            background-color: <?php echo esc_attr( get_theme_mod( 'header_background_color', '#0073aa' ) ); ?>;
+            background-color: <?php echo esc_attr( get_theme_mod( 'header_background_color', '#445591' ) ); ?>;
             color: #<?php echo esc_attr( get_header_textcolor() ); ?>;
         }
     </style>
