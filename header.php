@@ -4,7 +4,7 @@
  *
  * This template displays the <head> section and everything up until <div id="content">
  *
- * @package news24
+ * @package News24
  * @since 1.0
  */
 
