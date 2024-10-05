@@ -29,12 +29,12 @@ body {
 }
 
 a {
-    color: #0073aa;
+    color: #b31b1b;
     text-decoration: none;
 }
 
 a:hover {
-    color: #005177;
+    color: #ff2400;
 }
 
 /* Header Styles */
@@ -108,13 +108,13 @@ header.site-header h1 {
 }
 
 article.dotted {
-    padding-bottom: 20px;
-    border-bottom: 2px dotted #0073aa;
+    padding-bottom: 0;
+    border-bottom: 2px solid #b31b1b;
 }
 
 div#dotted{
-
-    border-bottom: 2px dotted #0073aa;
+    padding-bottom: 0;
+    border-bottom: 2px solid #b31b1b;
 }
 
 .entry-header {
@@ -160,7 +160,7 @@ div#dotted{
 .widget-area .widget h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #0073aa;
+    border-bottom: 2px solid #b31b1b;
     padding-bottom: 5px;
 }
 
@@ -174,12 +174,12 @@ div#dotted{
 }
 
 .widget-area .widget ul li a {
-    color: #0073aa;
+    color: #b31b1b;
     text-decoration: none;
 }
 
 .widget-area .widget ul li a:hover {
-    color: #005177;
+    color: #ff2400;
 }
 
 .comment-list {
@@ -209,7 +209,7 @@ footer.site-footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-top: 4px solid #0073aa;
+    border-top: 4px solid #b31b1b;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
@@ -227,7 +227,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background-color: #0073aa;
+    background-color: #b31b1b;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -240,7 +240,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background-color: #005177;
+    background-color: #ff2400;
 }
 
 /* Responsive Design */
@@ -281,7 +281,7 @@ input[type="submit"]:hover {
 }
 
 .sticky {
-    border: 2px solid #0073aa;
+    border: 2px solid #b31b1b;
     background-color: #f5f5f5;
     padding: 10px;
 }
@@ -489,7 +489,7 @@ nav {
 }
 
 .post-navigation-table a:hover .post-title {
-    color: #0073aa; /* Change this to match your theme's accent color */
+    color: #b31b1b; /* Change this to match your theme's accent color */
 }
 
 /* Style for the labels (Next post, Previous post) */
@@ -550,7 +550,7 @@ nav {
     content: "";
     width: 4px;
     height: 100%;
-    background-color: #0073aa;
+    background-color: #b31b1b;
     position: absolute;
     top: 0;
     left: 0;
@@ -570,7 +570,7 @@ nav {
 
 .comment-list .comment .comment-author b {
     font-weight: bold;
-    color: #0073aa;
+    color: #b31b1b;
 }
 
 .comment-list .comment .comment-metadata {
@@ -621,7 +621,7 @@ nav {
 }
 
 .comment-respond input[type="submit"] {
-    background-color: #0073aa;
+    background-color: #b31b1b;
     border: none;
     color: #fff;
     font-size: 20px;
@@ -655,14 +655,14 @@ p.comment-form-cookies-consent {
     padding: 10px 15px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
-    color: #0073aa;
+    color: #b31b1b;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .pagination .page-numbers:hover,
 .pagination .page-numbers.current {
-    background-color: #0073aa;
+    background-color: #b31b1b;
     color: #fff;
 }
 
@@ -676,12 +676,12 @@ p.comment-form-cookies-consent {
 /* Default link styling */
 .menu a {
     text-decoration: none;
-    color: #0073aa;
+    color: #b31b1b;
 }
 
 /* Focus state */
 .menu a:focus {
-    outline: 2px solid #005177;
+    outline: 2px solid #ff2400;
     background-color: #e0e0e0;
 }
 
@@ -700,19 +700,19 @@ p.comment-form-cookies-consent {
 /* Default link styling */
 a {
     text-decoration: underline; /* Underline links by default */
-    color: #0073aa; /* Example link color */
+    color: #b31b1b; /* Example link color */
 }
 
 /* Hover effect */
 a:hover,
 a:focus {
-    color: #005177; /* Darker color on hover/focus */
+    color: #ff2400; /* Darker color on hover/focus */
     text-decoration: none; /* Optionally remove underline on hover/focus */
 }
 
 /* Ensure sufficient contrast */
 a {
-    color: #0073aa; /* Ensure link color has sufficient contrast with background */
+    color: #b31b1b; /* Ensure link color has sufficient contrast with background */
 }
 
 /* Links within specific sections */
@@ -746,7 +746,7 @@ aside .wp-block-latest-comments{
 
 table#wp-calendar.wp-calendar-table caption{
     color: #ffffff;
-    background-color: #0073AA;
+    background-color: #b31b1b;
     font-weight: bolder;
     padding: 5px;
 }
@@ -758,14 +758,68 @@ nav.wp-calendar-nav a{
 /* Sidebar Widget Button Block Styles */
 
 .wp-block-button__link {
-    color: #0073AA;
+    color: #b31b1b;
     background-color: #fff;
-    border: 2px solid #0073AA;
+    border: 2px solid #b31b1b;
     border-radius: 9px;
 }
 
 .wp-block-button__link:hover {
     color: #fff;
-    background-color: #0073AA;
-    border: 2px solid #0073AA;
+    background-color: #b31b1b;
+    border: 2px solid #b31b1b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Side-by-side layout for posts */
+.post-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post-thumbnail-wrapper {
+    flex: 0 0 30%; /* Set image to take up 30% of the width */
+    margin-right: 20px; /* Add some space between the image and the content */
+}
+
+.post-content-wrapper {
+    flex: 1; /* The content takes the remaining width */
+}
+
+/* Ensure images are responsive */
+.post-thumbnail-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .post-wrapper {
+        flex-direction: column; /* Stack the image and content vertically on smaller screens */
+    }
+
+    .post-thumbnail-wrapper {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
